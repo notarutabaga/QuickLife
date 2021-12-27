@@ -1,0 +1,9 @@
+.text-area {
+    text-area-background: #303030 ;
+}
+
+.text-area .content {
+    -fx-background-color: text-area-background ;
+}
+
+/* progrmmatically update: textArea.setStyle("text-area-background: green;"); */
