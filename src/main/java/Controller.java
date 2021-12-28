@@ -1,14 +1,8 @@
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXTextArea;
-import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
-
-import javax.swing.*;
 
 public class Controller {
     public TextArea storyBox;
@@ -19,42 +13,60 @@ public class Controller {
     public TextField smartsField;
     public TextField looksField;
 
-    public int age;
-    public String name;
-    public int health, happiness, smarts, looks;
-    public Pane startingPane;
-    public TextField nameInputField;
     public Rectangle lockScreen;
     public Text gameName;
     public Text notarutabaga;
+    public TextField lastNameInputField;
+    public TextField firstNameInputField;
+    public JFXButton startButton;
 
-    public void initializeGame(ActionEvent event) {
-        name = nameInputField.getText();
-        nameInputField.setVisible(false);
-        lockScreen.setVisible(false);
-        gameName.setVisible(false);
-        notarutabaga.setVisible(false);
+    public int age;
+    public String firstName, lastName, fullName;
+    public int health, happiness, smarts, looks;
 
-        age = 0;
-        health = randPercent(); happiness = randPercent(); smarts = randPercent(); looks = randPercent();
+    public void initializeGame() {
+        if (validName()) {
+            firstName = firstNameInputField.getText();
+            lastName = lastNameInputField.getText();
+            fullName = firstName.concat(" " + lastName);
 
-        nameAgeField.setText(name + ", age " + age);
+            firstNameInputField.setVisible(false);
+            lastNameInputField.setVisible(false);
+            lockScreen.setVisible(false);
+            gameName.setVisible(false);
+            notarutabaga.setVisible(false);
+            startButton.setVisible(false);
 
-        healthField.setText("health: " + health + "%");
-        happinessField.setText("happiness: " + happiness + "%");
-        smartsField.setText("smarts: " + smarts + "%");
-        looksField.setText("looks: " + looks + "%");
+            age = 0;
+            health = randPercent(); happiness = randPercent(); smarts = randPercent(); looks = randPercent();
 
-        storyBox.setText("AGE " + age + ":\n\tI am born.");
+            nameAgeField.setText(fullName + ", age " + age);
+
+            healthField.setText("health: " + health + "%");
+            happinessField.setText("happiness: " + happiness + "%");
+            smartsField.setText("smarts: " + smarts + "%");
+            looksField.setText("looks: " + looks + "%");
+
+            storyBox.setText("AGE " + age + ":\n\tI am born.");
+        }
     }
 
     public int randPercent() {
         return (int)(Math.random() * 101);
     }
 
-    public void ageUpClicked(ActionEvent actionEvent) {
+    public boolean validName() {
+        if (firstNameInputField.getText().isEmpty()) return false;
+        if (lastNameInputField.getText().isEmpty()) return false;
+        if (firstNameInputField.getText().startsWith(" ")) return false;
+        if (lastNameInputField.getText().startsWith(" ")) return false;
+
+        else return true;
+    }
+
+    public void ageUpClicked() {
         age++;
-        nameAgeField.setText(name + ", age " + age);
+        nameAgeField.setText(fullName + ", age " + age);
         storyBox.appendText("\n\nAGE " + age + ":");
     }
 

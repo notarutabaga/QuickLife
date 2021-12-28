@@ -14,42 +14,53 @@
       <Circle fill="WHITE" layoutX="34.0" layoutY="34.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
       <TextField fx:id="nameAgeField" editable="false" focusTraversable="false" layoutX="54.0" layoutY="14.0" prefHeight="39.0" prefWidth="243.0" style="-fx-background-color: #303030; -fx-text-fill: #ffffff;">
          <font>
-            <Font size="18.0" />
+            <Font name="Gill Sans MT" size="18.0" />
          </font>
       </TextField>
       <JFXButton fx:id="ageUpButton" alignment="CENTER" layoutX="354.0" layoutY="14.0" onAction="#ageUpClicked" prefHeight="39.0" prefWidth="40.0" style="-fx-background-color: #acf49c;" text="+" textAlignment="CENTER">
          <font>
-            <Font size="18.0" />
+            <Font name="Gill Sans MT" size="18.0" />
          </font>
       </JFXButton>
       <TextField fx:id="healthField" editable="false" focusTraversable="false" layoutX="14.0" layoutY="361.0" prefHeight="25.0" prefWidth="95.0">
          <font>
-            <Font size="11.0" />
+            <Font name="Gill Sans MT" size="11.0" />
          </font></TextField>
       <TextField fx:id="happinessField" editable="false" focusTraversable="false" layoutX="109.0" layoutY="361.0" prefHeight="25.0" prefWidth="95.0">
          <font>
-            <Font size="11.0" />
+            <Font name="Gill Sans MT" size="11.0" />
          </font></TextField>
       <TextField fx:id="smartsField" editable="false" focusTraversable="false" layoutX="204.0" layoutY="361.0" prefHeight="25.0" prefWidth="95.0">
          <font>
-            <Font size="11.0" />
+            <Font name="Gill Sans MT" size="11.0" />
          </font></TextField>
       <TextField fx:id="looksField" editable="false" focusTraversable="false" layoutX="299.0" layoutY="361.0" prefHeight="25.0" prefWidth="95.0">
          <font>
-            <Font size="11.0" />
+            <Font name="Gill Sans MT" size="11.0" />
          </font></TextField>
       <TextArea fx:id="storyBox" focusTraversable="false" layoutX="408.0" layoutY="14.0" prefHeight="372.0" prefWidth="178.0" wrapText="true" />
       <Rectangle fx:id="lockScreen" arcHeight="5.0" arcWidth="5.0" fill="#303030" height="400.0" opacity="0.81" stroke="BLACK" strokeType="INSIDE" width="600.0" />
-      <TextField fx:id="nameInputField" alignment="CENTER" layoutX="216.0" layoutY="180.0" onAction="#initializeGame" prefHeight="40.0" prefWidth="167.0" promptText="Enter your name!" />
-      <Text fx:id="gameName" fill="#ffafcc" layoutX="191.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QuickLife!">
+      <Text fx:id="gameName" fill="#ffafcc" layoutX="191.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QuickLife!">
          <font>
             <Font name="Cambria Bold Italic" size="48.0" />
          </font>
       </Text>
-      <Text fx:id="notarutabaga" fill="#ffafcc" layoutX="196.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="by notarutabaga" textAlignment="CENTER" wrappingWidth="208.2890625">
+      <Text fx:id="notarutabaga" fill="#ffafcc" layoutX="196.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="by notarutabaga" textAlignment="CENTER" wrappingWidth="208.2890625">
          <font>
             <Font name="Cambria" size="13.0" />
          </font>
       </Text>
+      <TextField fx:id="firstNameInputField" alignment="CENTER" layoutX="196.0" layoutY="176.0" prefHeight="25.0" prefWidth="106.0" promptText="First name">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="lastNameInputField" alignment="CENTER" layoutX="302.0" layoutY="176.0" prefHeight="25.0" prefWidth="106.0" promptText="Last name">
+         <font>
+            <Font name="Gill Sans MT" size="12.0" />
+         </font></TextField>
+      <JFXButton fx:id="startButton" layoutX="252.0" layoutY="208.0" onAction="#initializeGame" prefHeight="0.0" prefWidth="106.0" style="-fx-background-color: #4d4d4d;" text="START" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font></JFXButton>
    </children>
 </AnchorPane>
