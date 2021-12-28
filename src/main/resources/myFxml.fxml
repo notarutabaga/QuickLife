@@ -4,6 +4,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
@@ -37,5 +38,10 @@
             <Font size="11.0" />
          </font></TextField>
       <TextArea fx:id="storyBox" focusTraversable="false" layoutX="408.0" layoutY="14.0" prefHeight="372.0" prefWidth="178.0" wrapText="true" />
+      <Pane fx:id="startingPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #303030;">
+         <children>
+            <TextField fx:id="nameInputField" alignment="CENTER" layoutX="202.0" layoutY="188.0" onAction="#getPlayerName" prefHeight="25.0" prefWidth="195.0" promptText="Enter your name!" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
