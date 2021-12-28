@@ -10,32 +10,32 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #303030;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
       <Circle fill="WHITE" layoutX="34.0" layoutY="34.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
-      <TextField fx:id="nameAgeField" editable="false" layoutX="54.0" layoutY="14.0" prefHeight="39.0" prefWidth="243.0" style="-fx-background-color: #303030; -fx-text-fill: #ffffff;">
+      <TextField fx:id="nameAgeField" editable="false" focusTraversable="false" layoutX="54.0" layoutY="14.0" prefHeight="39.0" prefWidth="243.0" style="-fx-background-color: #303030; -fx-text-fill: #ffffff;">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <JFXButton fx:id="ageUpButton" alignment="CENTER" layoutX="359.0" layoutY="14.0" onAction="#ageUpClicked" prefHeight="39.0" prefWidth="40.0" style="-fx-background-color: #acf49c;" text="+" textAlignment="CENTER">
+      <JFXButton fx:id="ageUpButton" alignment="CENTER" layoutX="354.0" layoutY="14.0" onAction="#ageUpClicked" prefHeight="39.0" prefWidth="40.0" style="-fx-background-color: #acf49c;" text="+" textAlignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>
       </JFXButton>
-      <TextField fx:id="healthField" editable="false" layoutX="14.0" layoutY="361.0" prefHeight="25.0" prefWidth="97.0">
+      <TextField fx:id="healthField" editable="false" focusTraversable="false" layoutX="14.0" layoutY="361.0" prefHeight="25.0" prefWidth="95.0">
          <font>
             <Font size="11.0" />
          </font></TextField>
-      <TextField fx:id="happinessField" editable="false" layoutX="113.0" layoutY="361.0" prefHeight="25.0" prefWidth="97.0">
+      <TextField fx:id="happinessField" editable="false" focusTraversable="false" layoutX="109.0" layoutY="361.0" prefHeight="25.0" prefWidth="95.0">
          <font>
             <Font size="11.0" />
          </font></TextField>
-      <TextField fx:id="smartsField" editable="false" layoutX="211.0" layoutY="361.0" prefHeight="25.0" prefWidth="97.0">
+      <TextField fx:id="smartsField" editable="false" focusTraversable="false" layoutX="204.0" layoutY="361.0" prefHeight="25.0" prefWidth="95.0">
          <font>
             <Font size="11.0" />
          </font></TextField>
-      <TextField fx:id="looksField" editable="false" layoutX="310.0" layoutY="361.0" prefHeight="25.0" prefWidth="97.0">
+      <TextField fx:id="looksField" editable="false" focusTraversable="false" layoutX="299.0" layoutY="361.0" prefHeight="25.0" prefWidth="95.0">
          <font>
             <Font size="11.0" />
          </font></TextField>
-      <TextArea fx:id="storyBox" editable="false" layoutX="408.0" layoutY="14.0" prefHeight="372.0" prefWidth="178.0" />
+      <TextArea fx:id="storyBox" focusTraversable="false" layoutX="408.0" layoutY="14.0" prefHeight="372.0" prefWidth="178.0" wrapText="true" />
    </children>
 </AnchorPane>
