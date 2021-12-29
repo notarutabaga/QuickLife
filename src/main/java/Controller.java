@@ -3,6 +3,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
@@ -18,7 +19,7 @@ public class Controller {
     public TextField smartsField;
     public TextField looksField;
 
-    public Rectangle lockScreen;
+    public Pane startPane;
     public Text gameName;
     public Text notarutabaga;
     public TextField lastNameInputField;
@@ -42,15 +43,7 @@ public class Controller {
             if (femChoice.isSelected()) sex = 'f';
             if (mChoice.isSelected()) sex = 'm';
 
-            firstNameInputField.setVisible(false);
-            lastNameInputField.setVisible(false);
-            femChoice.setVisible(false);
-            mChoice.setVisible(false);
-            lockScreen.setVisible(false);
-            gameName.setVisible(false);
-            notarutabaga.setVisible(false);
-            startButton.setVisible(false);
-            randomButton.setVisible(false);
+            startPane.setVisible(false);
 
             age = 0;
             health = randPercent(); happiness = randPercent(); smarts = randPercent(); looks = randPercent();
@@ -68,8 +61,10 @@ public class Controller {
         }
     }
 
-    public int randPercent() {
-        return (int)(Math.random() * 101);
+    public void ageUpClicked() {
+        age++;
+        nameAgeField.setText(fullName + ", age " + age);
+        storyBox.appendText("\n\nAGE " + age + ":");
     }
 
     public boolean validName() {
@@ -86,10 +81,8 @@ public class Controller {
         else return false;
     }
 
-    public void ageUpClicked() {
-        age++;
-        nameAgeField.setText(fullName + ", age " + age);
-        storyBox.appendText("\n\nAGE " + age + ":");
+    public int randPercent() {
+        return (int)(Math.random() * 101);
     }
 
     public void randomInfo(ActionEvent actionEvent) {
