@@ -20,7 +20,12 @@
                   <Font name="Gill Sans MT Bold" size="24.0" />
                </font>
             </Text>
-            <TextField fx:id="nameAgeField" editable="false" focusTraversable="false" layoutX="54.0" layoutY="14.0" prefHeight="39.0" prefWidth="243.0" style="-fx-background-color: #303030; -fx-text-fill: #ffffff;">
+            <TextField fx:id="nameAgeField" editable="false" focusTraversable="false" layoutX="54.0" layoutY="14.0" prefHeight="39.0" prefWidth="229.0" style="-fx-background-color: #303030; -fx-text-fill: #ffffff;">
+               <font>
+                  <Font name="Gill Sans MT Bold" size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="bankField" editable="false" focusTraversable="false" layoutX="282.0" layoutY="14.0" prefHeight="39.0" prefWidth="72.0" style="-fx-background-color: #303030; -fx-text-fill: #ffffff;">
                <font>
                   <Font name="Gill Sans MT" size="18.0" />
                </font>
@@ -53,8 +58,8 @@
             <TextArea fx:id="storyBox" focusTraversable="false" layoutX="408.0" layoutY="14.0" prefHeight="372.0" prefWidth="178.0" wrapText="true" />
          </children>
       </Pane>
-      <Pane layoutX="14.0" layoutY="64.0" prefHeight="285.0" prefWidth="379.0" style="-fx-background-color: white;" />
-      <Pane fx:id="startPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #303030;">
+      <Pane layoutX="14.0" layoutY="64.0" prefHeight="285.0" prefWidth="379.0" style="-fx-background-color: #ffffff;" />
+      <Pane fx:id="startPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #303030;" visible="false">
          <children>
             <Text fx:id="gameName" fill="#ffafcc" strokeType="OUTSIDE" strokeWidth="0.0" text="QuickLife!" x="191.0" y="152.0">
                <font>
